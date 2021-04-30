@@ -1,0 +1,22 @@
+body{
+background-image: url("background.jpg");
+}
+
+
+
+#volume{
+float: right;
+}
+
+#speed{
+float: left;
+}
+
+#v, #s{
+width: 100px;
+border-radius: 100%;
+}
+
+canvas{
+border: 5px inherit white;
+}
