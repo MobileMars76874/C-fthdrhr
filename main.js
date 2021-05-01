@@ -18,7 +18,7 @@ poseNet.on("pose", gopose);
 }
 
 function draw(){
-Image(Video, 0, 0, 400, 400);
+image(Video, 0, 0, 400, 400);
 
 fill(0, 255, 255);
 Stroke(30, 255, 255);
