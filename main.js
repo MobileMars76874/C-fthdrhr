@@ -1,3 +1,4 @@
+scoreleftWrist = 0;
 left_wrist_x = "";left_wrist_y = "";
 right_wrist_x = "";right_wrist_y = "";
 music = "";
@@ -17,13 +18,25 @@ poseNet.on("pose", gopose);
 }
 
 function draw(){
-
+fill(0, 255, 255);
+Stroke(30, 255, 255);
+if(scoreleftWrist > 0.2){
+circle(left_wrist_x, left_wrist_y, 20);
+numberleftWrist.y = Number(left_wrist_y);
+removeDecimals = floor(numberleftWrist.y);
+volume = removeDecimals/500;
+document.getElementById("V").innerHTML = "Volume : "+volume;
+setVolume(volume);
+}
 }
 
 
 function gopose(results){
 if(results.length < 0){
 console.log(results);
+scoreleftWrist = results[0].pose.keypoints[9].score;
+console.log("Score : "+scoreleftWrist)
+
 left_wrist_x = results[0].pose.leftWrist.x;
 left_wrist_y = results[0].pose.leftWrist.y;
 
