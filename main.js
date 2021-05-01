@@ -8,7 +8,7 @@ music = loadSound("Billy Goat Stomp - Joel Cummins.mp3");
 }
 
 function setup(){
-canvas = createCanvas(600, 600);
+canvas = createCanvas(400, 400);
 canvas.center();
 Video = createCapture(VIDEO);
 Video.hide();
@@ -18,7 +18,7 @@ poseNet.on("pose", gopose);
 }
 
 function draw(){
-Image(Video, 0, 0, 600, 600);
+Image(Video, 0, 0, 400, 400);
 
 fill(0, 255, 255);
 Stroke(30, 255, 255);
