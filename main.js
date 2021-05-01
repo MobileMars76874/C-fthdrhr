@@ -2,8 +2,7 @@ scoreleftWrist = 0;
 left_wrist_x = "";left_wrist_y = "";
 right_wrist_x = "";right_wrist_y = "";
 music = "";
-volume = 0;
-speed = 0;
+
 
 function preload(){
 music = loadSound("Billy Goat Stomp - Joel Cummins.mp3");
@@ -26,8 +25,8 @@ fill(0, 255, 255);
 stroke(30, 255, 255);
 if(scoreleftWrist > 0.2){
 circle(left_wrist_x, left_wrist_y, 20);
-var numberleftWrist_y = Number(left_wrist_y);
-var removeDecimals = floor(numberleftWrist_y);
+numberleftWrist_y = Number(left_wrist_y);
+removeDecimals = floor(numberleftWrist_y);
 volume = removeDecimals/500;
 document.getElementById("V").innerHTML = "Volume : "+volume;
 setVolume(volume);
