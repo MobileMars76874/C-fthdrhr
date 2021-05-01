@@ -21,7 +21,7 @@ function draw(){
 image(Video, 0, 0, 400, 400);
 
 fill(0, 255, 255);
-Stroke(30, 255, 255);
+stroke(30, 255, 255);
 if(scoreleftWrist > 0.2){
 circle(left_wrist_x, left_wrist_y, 20);
 numberleftWrist.y = Number(left_wrist_y);
