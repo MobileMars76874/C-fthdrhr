@@ -18,6 +18,8 @@ poseNet.on("pose", gopose);
 }
 
 function draw(){
+Image(Video, 0, 0, 600, 600);
+
 fill(0, 255, 255);
 Stroke(30, 255, 255);
 if(scoreleftWrist > 0.2){
@@ -48,5 +50,9 @@ right_wrist_y = results[0].pose.rightWrist.y;
 
 function play_s(){
 music.play();
+}
+
+function model_loaded(){
+console.log("Model Loaded!");
 }
     
