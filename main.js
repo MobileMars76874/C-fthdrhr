@@ -34,7 +34,7 @@ setVolume(volume);
 
 
 function gopose(results){
-if(results.length < 0){
+if(results.length > 0){
 console.log(results);
 scoreleftWrist = results[0].pose.keypoints[9].score;
 console.log("Score : "+scoreleftWrist)
