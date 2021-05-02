@@ -29,19 +29,25 @@ if(scorerightWrist > 0.2){
 circle(right_wrist_x, right_wrist_y, 20);
 if(right_wrist_y >= 0 && right_wrist_y <= 100){
 music.rate(0.5);
+document.getElementById("S").innerHTML = "Speed : "+0.5;
 }
 else if(right_wrist_y > 100 && right_wrist_y <= 200){
 music.rate(1);
+document.getElementById("S").innerHTML = "Speed : "+1;
 }
 else if(right_wrist_y > 200 && right_wrist_y <= 300){
 musci.rate(1.5);
+document.getElementById("S").innerHTML = "Speed : "+1.5;
 }
 else if(right_wrist_y > 300 && right_wrist_y <= 400){
 music.rate(2);
+document.getElementById("S").innerHTML = "Speed : "+2;
 }
 }
 
 if(scoreleftWrist > 0.2){
+fill(0, 255, 255);
+stroke(30, 255, 255);
 circle(left_wrist_x, left_wrist_y, 20);
 numberleftWrist_y = Number(left_wrist_y);
 removeDecimals = floor(numberleftWrist_y);
